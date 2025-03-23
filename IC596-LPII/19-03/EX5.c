@@ -66,7 +66,7 @@ main()
     
     if (jogada == "A1") {
 
-       tabuleiro[0][0] = "X";
+       tabuleiro[0][0] = 'X';
 
 
    }

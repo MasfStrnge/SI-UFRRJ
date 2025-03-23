@@ -52,7 +52,7 @@ main()
         
     } else {
 
-        printf(" ERROR: OS COMPRIMENTOS NÃO FORMAM UM TRIÂNGULO:\n");
+        printf(" ERROR: OS COMPRIMENTOS NÃO FORMAM UM TRIÂNGULO\n");
     }
     
     return 0;
