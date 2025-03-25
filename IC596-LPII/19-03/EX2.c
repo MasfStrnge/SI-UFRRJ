@@ -5,33 +5,36 @@
 
 int main() {
     
-   int arr[3], temp, i, j;
+   int valores[3], i, j, temp = 0;
 
-   for (int i=0;i<3;i++) {
+   printf("Digite três valores inteiros:\n ");
+    
+   for (i=0;i<3;i++) {
 
-      printf("INsira um número inteiro:");
-      scanf("%d",&arr[i]);
-
+      scanf("%d",&valores[i]);
+    
    }
+      
+   for (i=0;i<2;i++) 
+     
+      for (j=0;j<2-i;j++) {
 
-   for (j=0;j<3;j++) 
+         if (valores[j]>valores[j+1]) {
 
-      for (i=0; i<3;i++) {
+            temp = valores[j];
+            valores[j] = valores[j+1];
+            valores[j+1] = temp;
+         }
 
-        if (arr[i]>arr[i+1]) {
-
-            temp = arr[i+1];
-            arr[i+1] = arr[i];
-            arr[i] = temp;
-
-        }
+     }
+   
+     printf("Em ordem crescente:\n");
+      
+      for (i = 0; i < 3; i++) {
+         
+         printf("%d\n", valores[i]);
 
       }
-
-
-   }
-
-    
-
-    return 0;
+   
+   return 0;
 }

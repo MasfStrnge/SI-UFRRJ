@@ -15,7 +15,7 @@ main()
 
    for (int i=0; i<3; i++) {
    
-     printf("%d",pino1[i]);
+     printf("%d",pino[i]);
 
    }
 }
