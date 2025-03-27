@@ -1,6 +1,7 @@
 // 3) Você consegue repetir a questão anterior para que seu código
 // ordene qualquer quantidade de valores passado?
-
+#include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     
@@ -10,26 +11,12 @@ int main() {
     printf("Digite a quantidade de valores que deseja ordenar:");
     scanf("%d",&n);
 
-    for (i=0;i<(n-1); i++) {
-       
-        printf("Digite o valor: %d",i);  
-        
-            for (j=0;j<(n-1)-i; j++) {
+    for (i=0;i<n; i++) {
 
-                temp = valores[j];
-                valores[j] = valores[j+1];
-                valores[j+1] = temp;
-             }
+        printf("Digite o valor: %d\n",i);  
+        scanf("%d",&valores[i]);
     
          }
-       
-         printf("Em ordem crescente:\n");
-          
-          for (i = 0; i < n; i++) {
-             
-             printf("%d\n", valores[i]);
-    
-          }
        
     return 0;
 
