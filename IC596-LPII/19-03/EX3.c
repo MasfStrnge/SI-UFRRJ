@@ -3,32 +3,34 @@
 
 
 int main() {
-    float valores[3];
-    float temp;
+    
+    int n, i, j, temp;
+    int valores[n];
+    
+    printf("Digite a quantidade de valores que deseja ordenar:");
+    scanf("%d",&n);
 
-    // Passo 1: Ler os 3 valores
-    for (int i = 0; i < 3; i++) {
-        printf("Digite o %dº valor:\n", i + 1);
-        scanf("%f", &valores[i]);
-    }
+    for (i=0;i<(n-1); i++) {
+       
+        printf("Digite o valor: %d",i);  
+        
+            for (j=0;j<(n-1)-i; j++) {
 
-    // Passo 2: Ordenar usando Bubble Sort (funciona para qualquer quantidade)
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3 - i - 1; j++) {
-            if (valores[j] > valores[j + 1]) {
-                // Troca os valores se estiverem fora de ordem
                 temp = valores[j];
-                valores[j] = valores[j + 1];
-                valores[j + 1] = temp;
-            }
-        }
-    }
-
-    // Passo 3: Exibir os valores ordenados
-    printf("\nValores ordenados:\n");
-    for (int i = 0; i < 3; i++) {
-        printf("%.2f\n", valores[i]);
-    }
-
+                valores[j] = valores[j+1];
+                valores[j+1] = temp;
+             }
+    
+         }
+       
+         printf("Em ordem crescente:\n");
+          
+          for (i = 0; i < n; i++) {
+             
+             printf("%d\n", valores[i]);
+    
+          }
+       
     return 0;
+
 }
