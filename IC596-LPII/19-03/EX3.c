@@ -6,7 +6,7 @@
 
 int main() {
     
-    int n, i, j, temp;
+    int n, i, j, temp, contador = 0;
     
     printf("Digite a quantidade de valores que deseja ordenar:\n");
     scanf("%d",&n);
@@ -29,29 +29,29 @@ int main() {
 
     for (i=0; i<(n-1); i++) 
        
-        for (j=0; j<(n-1)-j; j++) {
+        for (j=0; j<(n-1)-i; j++) {
          
             if (valores[j]>valores[j+1]) {
 
                 temp = valores[j];
                 valores[j] = valores[j+1];
                 valores[j+1] = temp;
+                contador = contador + 1;
 
             }
 
         }
 
-    printf("Em ordem crescente:\n");
+    printf("\nDepois do Bubble Sort:\n");
       
         for (i = 0; i < n; i++) {
                
             printf("%d,", valores[i]);
       
         }
-       
-    }
 
     printf("\n");
+    printf("Quantidades de trocas: %d", contador);
        
     return 0;
 

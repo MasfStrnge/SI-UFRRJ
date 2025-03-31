@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
+
+
 int main(void);
 int
 main()
@@ -28,9 +32,10 @@ main()
    system("clear");
    
    // Gerando o tabuleiro...
-    printf("Gerando o tabuleiro....\n");   
+    
+   printf("Gerando o tabuleiro....\n");   
    
-    printf(" A  B  C\n");
+   printf(" A  B  C\n");
       
       for (i = 0; i < 3; i++)
       { 
