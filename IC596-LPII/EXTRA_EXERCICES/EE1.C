@@ -4,7 +4,7 @@ correspondente em decímetros, centímetros e milímetros.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main(void)
 
 {
     float ValorMetr, ValorDec, ValorCen, ValorMil;

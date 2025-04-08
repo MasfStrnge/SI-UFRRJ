@@ -4,14 +4,18 @@ correspondente em hexa e octal.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main(void)
 {
-   int dec, hex, oct;
+   int dec;
 
    printf("Digite um número em decimal:\n");
    scanf("%d",&dec);
 
-   // Correspondente em hexa:
+   printf("HEXADECIMAL: %X\n",dec);
+   printf("OCTAL: 0%o\n",dec);
 
-   hex = dec
+   printf("\a");
+
+   return 0;
+   
 }
