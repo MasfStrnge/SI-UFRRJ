@@ -45,9 +45,8 @@ int numero_perfeito(int numero, int soma) {
 
     if (numero == soma) {
 
-        printf("O número: %d é um NÚMERO PERFEITO\n",numero);
+        return numero;
     }
-
 
 }
 
@@ -79,41 +78,13 @@ int n_perfeito(int numero, int soma) {
 
 }
 
-int fatorial() {
-
-
-}
-
-int fatorial_duplo() {
-
-
-}
-
-int primordial(int numero) {
-
-    for (int i = 0; i < numero; i++) {
-
-        if (i > 1 && i )
-    }
-
-}
 
 int main() {
 
-    int opcao =;
-    
-    do {
-   
-    printf("Escolha uma das opções de 1 a 7:\n");
-    switch (opcao) {
-        
-        case opcao == 1:
-
-    }
-   
-
-
-    } while (opcao == 'S');
+    printf("%2.f\n",celsius_kelvin(32,0));
+    printf("%2.f\n",kelvin_fahrenheit(200,0));
+    printf("%d",numero_perfeito(8,0));
+    printf("%d\n",n_perfeito());
 
     return 0;
 

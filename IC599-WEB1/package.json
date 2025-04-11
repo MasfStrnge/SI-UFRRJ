@@ -1,0 +1,11 @@
+{
+  "name": "web1",
+  "version": "1.0.0",
+  "description": "Primeiro servidor node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuela Ferreira",
+  "license": "ISC"
+}
