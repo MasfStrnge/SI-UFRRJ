@@ -10,23 +10,21 @@ g) Calcule o primordial de um número*/
 #include <stdio.h>
 #include <stdlib.h>
 
-float celsius_kelvin(float celsius, float kelvin) {
+float celsius_kelvin(float celsius) {
 
-   kelvin = celsius + 273.15;
-   return kelvin;
-
-}
-
-float kelvin_fahrenheit(float kelvin, float fahrenheit) {
-
-    fahrenheit = ((kelvin - 273.15) * 9/5 + 32);
-    return fahrenheit;
+   return celsius + 273.15;
 
 }
 
-int numero_perfeito(int numero, int soma) {
+float kelvin_fahrenheit(float kelvin) {
 
-    soma = 0;
+    return ((kelvin - 273.15) * 9/5 + 32);
+
+}
+
+int eh_perfeito(int numero) {
+
+     int soma = 0;
     
     if (numero < 0) {
 
@@ -81,11 +79,10 @@ int n_perfeito(int numero, int soma) {
 
 int main() {
 
-    printf("%2.f\n",celsius_kelvin(32,0));
-    printf("%2.f\n",kelvin_fahrenheit(200,0));
-    printf("%d",numero_perfeito(8,0));
-    printf("%d\n",n_perfeito());
-
+    printf("%2.f\n",celsius_kelvin(32));
+    printf("%2.f\n",kelvin_fahrenheit(200));
+    printf("%d",eh_perfeito(8));
+    
     return 0;
 
 }
