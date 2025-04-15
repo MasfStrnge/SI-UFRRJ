@@ -22,66 +22,126 @@ float kelvin_fahrenheit(float kelvin) {
 
 }
 
-int eh_perfeito(int numero) {
-
-     int soma = 0;
+void eh_perfeito(int num) {
     
-    if (numero < 0) {
-
-        printf("ERRO: O NÚMERO DEVE SER POSITIVO");
+    int soma = 0;
+    
+    if (num < 0) {
+        
+        printf("ERRO: O NÚMERO DEVE SER POSITIVO\n");
+        return;
     }
 
-    for (int i = 0; i < numero; i++ ) {
+    for (int i = 1; i < num; i++) {
        
-        if (numero % i == 0) {
-           
-            soma = soma + i;
-
+        if (num % i == 0) {
+            
+            soma += i;
         }
-
+   
     }
 
-    if (numero == soma) {
-
-        return numero;
+    if (num == soma) {
+        printf("c) O número %d é perfeito\n",num);
+    
+    } else {
+        printf("c) O numero %d não é perfeito\n",num);
     }
+}
+
+void n_perfeito(int num) {
+
+    do {
+    
+        eh_perfeito(num); 
+    
+    } while (num != 0)
+    
 
 }
 
-int n_perfeito(int numero, int soma) {
+
+
+
+int fatorial(int num) {
+
+    if (num == 0 || num == 1)
+    return 1;
     
-    soma = 0;
+    int fat = num * (num - 1);
     
-    if (numero < 0) {
-
-        printf("ERRO: O NÚMERO DEVE SER POSITIVO");
+    for (int i = 2; i < num; i++) {
+        fat *= (num - i);
     }
-
-    for (int i = 0; i < numero; i++ ) {
-       
-        if (numero % i == 0) {
-           
-            soma = soma + i;
-
-        }
-
-    }
-
-    if (numero == soma) {
-
-        printf("O número: %d é um NÚMERO PERFEITO\n",numero);
-    }
-
-
+    
+    return num = fat;
 
 }
 
+int fatorial_duplo(int num) {
+
+    if (num == 0 || num == 1) {
+        return 1;
+    }
+    
+    int fat = num * (num - 2);
+    
+    for (int i = 4; i < num; i++) {
+        fat *= (num - i);
+        i += 1;
+    }
+    
+    return num = fat;
+}
+
+int primorial(int num) {
+
+    int i, j; 
+    int cont = 0, p = 1;
+    
+    for (i = 2; i <= num; i++) {       // Mudar o numero verificado    
+        cont = 0; // reinicializa o contador
+        
+        for (j = 1; j <= i; j++) {   // loop para verificar se o número é primo.
+        
+            if ( i % j == 0) {  // vendo se o mod resulta em zero ex: 2 % 1 == 0
+                cont += 1;      // se for verdadeiro, soma mais um ao contador
+        }
+        
+    }
+    
+    if (cont == 2) {     // se o contador for igual a 2 (todo número primo tem 2 divisores) 
+            
+        p *= i;      //se for verdadeiro, ele se multiplica com os outros números primos,
+                    // resultando no número primordial de n 
+     
+       }
+}
+
+return num = p;
+
+}
 
 int main() {
 
-    printf("%2.f\n",celsius_kelvin(32));
-    printf("%2.f\n",kelvin_fahrenheit(200));
-    printf("%d",eh_perfeito(8));
+   
+    
+    printf("a) 32° celsius em kelvin: %.2f°\n",celsius_kelvin(32));
+    
+    printf("b) 280° kelvin em fahrenheit: %.2f°\n",kelvin_fahrenheit(280));
+    
+    eh_perfeito(6);
+    
+    int num;
+    printf("Digite o número para verificar se é perfeito ou não\n");
+    scanf("%d",&num);
+    n_perfeito(num);
+    
+    printf("e) O fatorial de 7 é: %d\n",fatorial(7));
+    
+    printf("f) O fatorial duplo de 7 é: %d\n",fatorial_duplo(7));
+    
+    printf("g) O primorial de 7 é: %d\n",primorial(10));    
     
     return 0;
 
