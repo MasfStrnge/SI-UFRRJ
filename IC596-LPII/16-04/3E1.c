@@ -8,15 +8,27 @@ na altura de 30m.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h> // precisa para sqrt()
 
 int main() {
 
     const float gravidade = 10;
-    float objeto = 5, altura = 30; 
+    float massa = 5, altura = 30; 
     float velocidade, força;
 
-    
+    velocidade = sqrt(2 * gravidade * altura);
+    força = massa * gravidade;
 
+    printf("a)\n");
+    printf("Velocidade ao atingir o chão: %.2f m/s\n", velocidade);
+    printf("Força peso do objeto: %.2f N\n\n", força);
 
+    float velocidade_inicial = 12;
+    velocidade = sqrt(velocidade_inicial * velocidade_inicial + 2 * gravidade * altura);
 
+    printf("b)\n");
+    printf("Velocidade ao atingir o chão (com velocidade inicial de 12 m/s): %.2f m/s\n", velocidade);
+    printf("Força peso do objeto: %.2f N\n", força); 
+
+    return 0;
 }
