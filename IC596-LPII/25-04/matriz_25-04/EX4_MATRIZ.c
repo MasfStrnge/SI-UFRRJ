@@ -1,32 +1,33 @@
-/*2) Faça outra função para retornar a transposta de uma matriz 
-passado por referência:*/
+/*4)Faça uma função que some os valores de uma matriz*/
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void transposta(int linha, int coluna,int matriz[linha][coluna], int resultado[linha][coluna]) {
+int soma_valores_matriz(int linha,int coluna, int matriz[linha][coluna]) {
 
     int i,j;
-      
-    for(i=0;i<coluna;i++) {
-        for(j=0;j<linha;j++) {
-            resultado[i][j] = matriz[j][i];
+    int soma = 0;
+ 
+    for(i=0;i<linha;i++) {
+        for(j=0;j<coluna;j++) {
+            soma += matriz[i][j];
         }
     }
+
+    return soma;
 
 }
 
 int main() {
 
-    int linha, coluna, i, j;
-
+    int i, j, linha, coluna;
+      
     printf("Digite quantas linhas a matriz deve ter:\n");
     scanf("%d",&linha);
     printf("Digite quantas colunas a matriz deve ter:\n");
     scanf("%d",&coluna);
     
     int matriz[linha][coluna];
-    int resultado[coluna][linha];
     
     for(i = 0; i < linha; i++) {
         for(j = 0; j < coluna; j++) {
@@ -35,7 +36,7 @@ int main() {
         }
     }
 
-    printf("A MATRIZ ORIGINAL:\n");
+    printf(" A MATRIZ:\n");
     for(i=0;i<linha;i++) {
         for(j=0;j<coluna;j++) {
             printf("|%d|",matriz[i][j]);
@@ -43,21 +44,9 @@ int main() {
         
         printf("\n"); 
     }
-
-    transposta(linha,coluna,matriz,resultado);
-
-    printf("\n");
-
-    printf("A MATRIZ TRANSPOSTA:\n");
-    for(i=0;i<coluna;i++) {
-        for(j=0;j<linha;j++) {
-            printf("|%d|",resultado[i][j]);
-        }
-        
-        printf("\n"); 
-    }
-
+    
+    int soma = soma_valores_matriz(linha,coluna,matriz);
+    printf("A soma dos valores da matriz é: %d\n",soma);
 
     return 0;
-    
 }
