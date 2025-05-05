@@ -28,7 +28,7 @@ int main() {
     scanf("%d", &ordem);
 
     if (ordem != 2 && ordem != 3) {
-        printf("Somente matrizes 2x2 ou 3x3 são suportadas.\n");
+        printf("Somente matrizes 2x2 ou 3x3 são aceitas.\n");
         return 1;
     }
 

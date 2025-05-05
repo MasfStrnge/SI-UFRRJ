@@ -13,10 +13,10 @@ void soma_matriz(int linha, int coluna, int m1[linha][coluna], int m2[linha][col
         }
     }
 
-    printf("MATRIZ RESULTANTE:\n");
+    printf("RESULTADO DA SOMA DE MATRIZES:\n");
     for(i = 0; i < linha; i++) {
         for(j = 0; j < coluna; j++) {
-            printf("  %d  ",resultado[i][j]);
+            printf("|%d|",resultado[i][j]);
         }
         printf("\n");
     }
@@ -100,6 +100,7 @@ int main() {
     }
 
     soma_matriz(linha,coluna,m1,m2);
+    printf("\n");
 
     printf("A MATRIZ ORIGINAL:\n");
     for(i=0;i<linha;i++) {
@@ -109,7 +110,7 @@ int main() {
         printf("\n");
     }
 
-    int resultado[coluna][linha];
+    int resultado[linha][coluna];
     transposta(linha,coluna,m1,resultado);
 
     printf("\n");
@@ -121,6 +122,7 @@ int main() {
         printf("\n");
     }
 
+    printf("\n");
     printf("Determinante = %d\n", determinante(linha,coluna,m1));
     printf("Soma dos valores da matriz 1 = %d\n", soma_valores_matriz(linha,coluna,m1));
 
