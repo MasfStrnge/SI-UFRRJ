@@ -8,7 +8,7 @@ Será na função que será verificada a lotação e evitará que o mesmo aluno 
 #include <stdlib.h>
 #include <string.h>
 
-const quantidade_alunos = 3;
+#define quantidade_alunos 3 // usando define porque o const não pode ser usado como tamanho de array
 
 
  typedef enum { // Enum do nível
