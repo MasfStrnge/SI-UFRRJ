@@ -7,7 +7,7 @@
 float* ler_notas(int qtde) {
     
     float *notas;
-    notas = malloc(qtde * sizeof(float)); // Alocação dinâmica de memória
+    notas = (float*) calloc(qtde,sizeof(float)); // Alocação dinâmica de memória
 
     for (int i = 0; i < qtde; i++) {
         printf("Nota %d: ", i + 1);
