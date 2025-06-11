@@ -6,11 +6,13 @@
 void inverte_elementos(int *p, int tamanho )
 {
 
-    int *aux = p;
+    //int *aux = p;
+   // int aux_2 = 0;
     
     for(int i = 0; i < tamanho; i++) {
-        
-        *(p+((tamanho - 1) - i)) = *(aux+i); 
+        // aux_2 = (*(aux+i));
+        //*(p+((tamanho - 1) - i)) = aux_2;
+        printf("%d ",*(p+((tamanho - 1) - i))); 
         
     }
 }
@@ -29,13 +31,13 @@ int main(void)
 
     inverte_elementos(array_inteiro, tamanho);
 
-    printf("Os elementos do array DEPOIS da chamada da função os inverte-los:\n");
+    /*printf("Os elementos do array DEPOIS da chamada da função os inverte-los:\n");
 
     for(int i = 0; i < tamanho; i++) {
         printf("%d ",array_inteiro[i]);
     }
 
-    printf("\n");
+    printf("\n");*/
 
     return 0;
 
