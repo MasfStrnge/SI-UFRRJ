@@ -10,29 +10,38 @@
 
 int main(void)
 {
-    char *string, 
+    char *string;
     int tamanho = 0;
     char caracter;
 
-    string = malloc(string + 1);
+    string = malloc(sizeof(char));
 
     if (string == NULL) {
         printf("ERROR: FALHA NA ALOCAÇÃO DINÂMICA");
         return 1;
     }
 
-    while (caracter = getchar())
-    
-    
-    printf("Digite uma string (aperte ENTER para finalizar): ");
-    for(int i = 0; i < strlen(string); i++) {
-        scanf("")
-    }
-    
-    
-    
-    
-    scanf("%s",&string);
+    while((caracter = getchar()) != '\n') {
 
+        char *temp = realloc(string, tamanho + 1);
+        
+        if (string == NULL) {
+            printf("ERROR: FALHA NA ALOCAÇÃO DINÂMICA");
+            free(string);
+            return 1;
+        }
+
+        string = temp;
+        string[tamanho] = caracter;
+        tamanho++;
+    }
+        
+    string = realloc(string, tamanho + 1);
+    string[tamanho] = '\0';
+
+    printf("Você digitou: %s\n", string);
+    free(string);
+    
+   return 0;
 
 }
