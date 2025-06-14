@@ -15,21 +15,48 @@ int main(void)
 
     printf("Digite o número de linhas da matriz: ");
     scanf("%d", &linhas);
+   
     printf("Digite o número de colunas da matriz: ");
     scanf("%d", &colunas);
 
-    matriz = malloc(linhas * (sizeof(int *)));
+    printf("\n");
+
+    matriz = malloc(linhas * sizeof(int *));
     if(matriz == NULL) {
         printf("ERRO: FALHA NA ALOCAÇÃO DINÂMICA");
         return 1;
     }
 
     for(int i = 0; i < linhas; i++) {
-        matriz = malloc(colunas * (sizeof(int)));
-        if(matriz == NULL) {
-            
+        matriz[i] = malloc(colunas * sizeof(int));
+        if(matriz[i] == NULL) {
+            printf("ERRO: FALHA NA ALOCAÇÃO DINÂMICA");
+            return 1;
         }
     }
 
+    for(int i = 0; i < linhas; i++) {
+        for(int j = 0; j < colunas; j++) {
+            printf("Digite o elemento: matriz[%d][%d] da matriz: ",i+1,j+1);
+            scanf("%d",&matriz[i][j]);
+        }
+    }
 
+    printf("\n");
+
+    for(int i = 0; i < linhas; i++) {
+        for(int j = 0; j < colunas; j++) {
+            printf("%4d",matriz[i][j]);
+        }
+        
+        printf("\n");
+    }
+
+    for(int i = 0; i < linhas; i++) {
+        free(matriz[i]);
+    }
+
+    free(matriz);
+    
+    return 0;
 }
