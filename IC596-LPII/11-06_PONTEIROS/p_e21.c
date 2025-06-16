@@ -28,7 +28,7 @@ int main(void)
         }
 
         printf("Digite o %dº nome de %d nomes: ",i+1, quantidade_de_nomes);
-        scanf("%s",&nome[i]);
+        scanf("%99s",nome[i]);
     }
 
     while(1) {
@@ -44,7 +44,7 @@ int main(void)
         printf("Quantos nomes a mais gostaria de adicionar à lista:");
         scanf("%d",&novos_nomes);
         
-        char **temp = realloc(nome, (quantidade_de_nomes + novos_nomes) * sizeof(char));
+        char **temp = realloc(nome, (quantidade_de_nomes + novos_nomes) * sizeof(char*));
         if (temp == NULL) {
             printf("ERRO: FALHA NA ALOCAÇÃO DINÂMICA\n");
             return 1;
@@ -52,7 +52,7 @@ int main(void)
         
         nome = temp;
         
-        for(int i = quantidade_de_nomes; i <= quantidade_de_nomes + novos_nomes; i++) {
+        for(int i = quantidade_de_nomes; i < quantidade_de_nomes + novos_nomes; i++) {
                 nome[i] = malloc(100 * sizeof(char));
                 
                 if (nome[i] == NULL) {
@@ -60,8 +60,8 @@ int main(void)
                     return 1;
                 }
                 
-                printf("Digite o %dº nome de %d nomes: ",i + 1, quantidade_de_nomes);
-                scanf("%s",&nome[i]);
+                printf("Digite o %dº nome de %d nomes: ",i + 1, (quantidade_de_nomes + novos_nomes));
+                scanf("%99s",nome[i]);
         }
         
         quantidade_de_nomes += novos_nomes;
@@ -69,7 +69,11 @@ int main(void)
 
     printf("\n####### LISTA DOS NOMES ALOCADOS #######\n");
     for(int i = 0; i < quantidade_de_nomes; i++) {
-        printf("%s",nome[i]);
+        printf("%d. %s\n",i+1, nome[i]);
+    }
+
+    for(int i = 0; i < quantidade_de_nomes; i++) {
+        free(nome[i]);
     }
     
     free(nome);
