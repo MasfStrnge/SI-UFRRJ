@@ -46,7 +46,7 @@ int main(void)
         printf("########## %dº REGISTRO ##########\n",i+1);
         fgets(lista_logs[i], 300, stdin);
         
-        lista_logs[i][(strcspn(lista_logs[i], "\n")] = 0;
+        lista_logs[i] strcspn(lista_logs[i], "\n") = 0;
         
         if(lista_logs[i] == "FIM") {
             return 1;

@@ -4,7 +4,7 @@
 
 int main(void) {
     char **lista_logs = NULL;
-    char buffer[1000]; // Buffer temporário para entrada
+    char buffer[1000];
     int num_logs = 0;
     int capacidade = 0;
     
