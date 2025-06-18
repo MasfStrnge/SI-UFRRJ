@@ -1,0 +1,8 @@
+Antes de continuar, teste você mesmo.
+
+1. O que acontece se você abrir um arquivo com 'w' só que esse arquivo já existe e tem seu nome, mas você vem e escreve Rural no arquivo?
+RESPOSTA: Eu recebo
+
+2. O que acontece se você acessar um arquivo para adicionar algo (append, 'a') e esse arquivo não existir?
+
+3. O que pode acontecer "de ruim" se você não fechar o arquivo (fclose)?
