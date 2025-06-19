@@ -15,7 +15,9 @@ Pratique antes de continuar. Veja na prática e responda.
 
 Agora você faz:
 
-3. Pegue a letra de uma música qualquer e salve em um arquivo de texto. Depois, faça um programa que leia esse arquivo e escreva em outro a letra da música contendo apenas as linhas pares.
+3. Pegue a letra de uma música qualquer e salve em um arquivo de texto. 
+Depois, faça um programa que leia esse arquivo 
+e escreva em outro a letra da música contendo apenas as linhas pares.
 
 */
 
