@@ -2,12 +2,13 @@
 #include <stdlib.h>
 
 
-/**
+/*
 Neste exemplo, o código vai para uma linha específica do arquivo.
 Observe a função rewind dentro de irParaLinha.
 Tome cuidado para que exista o arquivo letraMusica.txt. Pelo menos na primeira vez, coloque um conteúdo textual extenso nele.
 
 Uma pergunta: como identificar a quebra de linha?
+RESPOSTA: a função fgets() lê atep encontrar uma quebra de linha com o \n.
 
 */
 

@@ -20,12 +20,12 @@ int main(void)
         return 1;
     }
 
-    char buffer[2000];
+    char buffer[50];
     int contador = 0;
     letra_linhas_pares = fopen("nirvana_pares.txt","w");
 
 
-    while(fgets(buffer,2000,letra_musica)) {
+    while(fgets(buffer,50,letra_musica)) {
         contador++;
 
         if (contador % 2 == 0) {
