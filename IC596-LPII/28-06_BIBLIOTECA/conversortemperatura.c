@@ -1,9 +1,9 @@
 #include "conversortemperatura.h"
 
-float celciustokevin(float t) {
+float celsiusToKelvin(float t) {
     return t+273;
 }
 
-float kelvintocelcius(float t) {
+float kelvinToCelsius(float t) {
     return t-273;
 }

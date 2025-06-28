@@ -1,7 +1,7 @@
-#ifndef conversortemperatura
-#define conversortemperatura
+#ifndef CONVERSORTEMPERATURA_H
+#define CONVERSORTEMPERATURA_H
 
-float celsiustokelvin(float t);
-float kelvintocelsius(float t);
+float celsiusToKelvin(float t);
+float kelvinToCelsius(float t);
 
 #endif
