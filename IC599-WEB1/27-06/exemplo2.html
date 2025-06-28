@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> NOVO ELEMENTO A PÁGINA</title>
+    </head>
+    <body>
+        <ul id="lista">
+            <li>Item 1</li>
+        </ul>
+    <button onclick="adicionarItem()">Adicionar item</button>
+    <script>
+        function adicionarItem() {
+        const novoItem = document.createElement("li");
+        novoItem.innerText = "Novo item";
+        document.getElementById("lista").appendChild(novoItem);
+    }
+    </script>
+    </body>
+</html>

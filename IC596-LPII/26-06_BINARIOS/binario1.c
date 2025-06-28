@@ -32,43 +32,45 @@ Arquivos binários podem ter problemas de portabilidade entre sistemas com arqui
 */
 
 //Vamos usar e salvar essa estrutura no formato binário, mas poderia ser um inteiro ou algo básico
-typedef struct aluno{
+typedef struct aluno {
     int id;
     char nome[50];
     float nota;
 } Aluno;
 
-
 int main() {
     Aluno aluno = {1, "Ana", 7.5};
 
-    //Observe o modo de abertura do arquivo
-    FILE *arquivo = fopen("alunos.bin", "wb");
-
+    // Grava o primeiro aluno
+    FILE *arquivo = fopen("alunos.bin", "wb"); // write binary = apaga o anterior
     if (arquivo == NULL) {
         perror("Erro ao abrir o arquivo");
         return 1;
     }
 
-    //Olha a função de escrita fwrite. Ela usa 4 argumentos.
-    //Sintaxe: fwrite(const void *p_dados, size_t tam_dados,size_t qtde_elem_grav, FILE *arq)
-    //&aluno é o ponteiro para os dados que serão gravados
-    //sizeof(Aluno) é o tamanho de dados que serão gravados em bytes
-    //1 é a quantidade de dados que serão gravados. No caso, só 1 aluno.
-    //"arquivo" é o ponteiro para o arquivo
     fwrite(&aluno, sizeof(Aluno), 1, arquivo);
+    fclose(arquivo); // Fecha após o primeiro
 
-    //fwrite retorna o número de elementos gravados. Se o valor for diferente de qtde_elem_grav, ocorreu algum erro
+    // Reabre para gravar mais dois alunos de uma vez
+    Aluno maisDois[2] = {
+        {2, "Bruno", 8.0},
+        {3, "Carlos", 9.0}
+    };
 
-//Se quiser verificar, troque a linha de cima pelo trecho comentado abaixo.
-//    size_t escritos = fwrite(&aluno, sizeof(Aluno), 1, arquivo);
-//    if (escritos != 1) {
-//        perror("Erro na escrita");
-//    }
+    arquivo = fopen("alunos.bin", "ab"); // append binary
+    if (arquivo == NULL) {
+        perror("Erro ao reabrir o arquivo");
+        return 1;
+    }
 
-    //já conhecemos e sabemos que faz o flush.
-    fclose(arquivo);
-    printf("Registro gravado com sucesso!\n");
+    fwrite(maisDois, sizeof(Aluno), 2, arquivo); // grava 2 registros de uma vez
+
+    // Grava mais um antes de fechar
+    Aluno ultimo = {4, "Diana", 6.5};
+    fwrite(&ultimo, sizeof(Aluno), 1, arquivo);
+
+    fclose(arquivo); // flush final
+    printf("Todos os registros foram gravados!\n");
 
     return 0;
 }
