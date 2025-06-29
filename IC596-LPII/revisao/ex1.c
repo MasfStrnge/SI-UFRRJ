@@ -15,5 +15,7 @@ int main(void)
 
     printf("%d\n",*ponteiro);
 
+    free(ponteiro);
+
     return 0;
 }
