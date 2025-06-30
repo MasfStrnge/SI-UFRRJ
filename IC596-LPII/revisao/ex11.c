@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define TAM_BUFFER 2000
+#define TAM_BUFFER 200
 
 typedef struct {
     char nome[50];

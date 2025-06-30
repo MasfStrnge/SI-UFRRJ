@@ -19,7 +19,7 @@ int main(void)
     char linha[200];
 
     while(fgets(linha,200,arquivo)) {
-        if(sscanf(linha,"%s %f",nome,&nota) == 2) {
+        if(sscanf(linha,"%[^\t]\t%f\n",nome,&nota) == 2) {
             if(nota >= 7) {
                 printf("%s\t%.2f\n",nome,nota);
             }
