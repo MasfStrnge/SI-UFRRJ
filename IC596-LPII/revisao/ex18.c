@@ -32,14 +32,32 @@ Aluno* retorna(int tamanho) {
     return aluno;
 }
 
+void abaixo_da_media(Aluno aluno[],int tamanho, float media) {
+    for(int i = 0; i < tamanho; i++) {
+        if(aluno[i].nota < media) {
+            printf("%d - %s\t%.2f\n",i+1,aluno[i].nome,aluno[i].nota);
+        }
+    }
+
+}
+
 int main(void) 
 {
-    int tamanho = 2;
+    int tamanho = 0, soma = 0;
+
+    printf("Quantos alunos deseja cadastrar?: ");
+    scanf("%d",&tamanho);
+    while(getchar() != '\n');
+
     Aluno *aluno = retorna(tamanho);
 
-    for(int i)
+    for(int i = 0;i < tamanho; i++) {
+        soma += aluno[i].nota;
+    }
 
+    abaixo_da_media(aluno,tamanho,((float)soma/tamanho));
 
+    free(aluno);
 
-
+    return 0;
 }
