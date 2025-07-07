@@ -22,7 +22,7 @@ int main(void)
 
     for(int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            printf("matriz[i][j]: ",i+1,j+1);
+            printf("Preencha: matriz[%d][%d]: ",i+1,j+1);
             scanf("%d",&matriz[i][j]);
         }
     }

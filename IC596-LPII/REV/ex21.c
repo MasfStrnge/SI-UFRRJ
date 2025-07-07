@@ -1,5 +1,8 @@
 // 21. Crie um enum com níveis de acesso (ADMIN, USER, GUEST) e use switch para exibir permissões.
 
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef enum {
     ADMIN, USER, GUEST
 }Acesso;

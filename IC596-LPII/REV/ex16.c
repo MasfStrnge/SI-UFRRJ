@@ -16,7 +16,7 @@ int main(void)
 
     for(int i = 0; i < 5; i++) {
         if(pessoa[i].idade > 18) {
-            printf("Nome: %d\tIdade: %d\tAltura: %.2f\n",pessoa[i]);
+            printf("Nome: %s | Idade: %d | Altura: %.2f\n",pessoa[i].nome, pessoa[i].idade, pessoa[i].altura);
         }
     }
 

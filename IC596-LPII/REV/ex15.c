@@ -15,15 +15,15 @@ int main(void)
     Pessoa pessoa1;
     
     printf("Digite o nome da pessoa: ");
-    fgets(pessoa1.nome,sizeof(pessoa1.nome),stdin);
+    scanf("%s",pessoa1.nome);
 
     printf("Digite a idade da pessoa: ");
     scanf("%d",&pessoa1.idade);
 
     printf("Digite a altura da pessoa: ");
-    scanf("%f",pessoa1.altura);
+    scanf("%f",&pessoa1.altura);
 
-    printf("Nome: %s\tIdade: %d\tAltura: %.2f\n",pessoa1);
+    printf("Nome: %s | Idade: %d | Altura: %.2f\n",pessoa1.nome,pessoa1.idade,pessoa1.altura);
 
     return 0;
 }

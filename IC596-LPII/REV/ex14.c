@@ -12,7 +12,7 @@ int main(void)
 
     for(int i = 0; i < 10; i++) {
         if(guess == array[i]) {
-            printf("O número %d está na %dº posição do array\n",guess,i);
+            printf("O número %d está na %dº posição do array\n",guess,i+1);
         }
     }
 
