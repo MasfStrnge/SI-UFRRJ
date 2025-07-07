@@ -4,10 +4,10 @@
 
 int main(void) 
 {
-    int num = 2;
+    int num = 7;
 
-    for(int i = 0; i < 11; i++) {
-        printf(" %d X i = %d\n",num,i, (num * i));
+    for(int i = 0; i <= 10; i++) {
+        printf(" %d X %d = %d\n",num,i, (num * i));
     }
 
     return 0;

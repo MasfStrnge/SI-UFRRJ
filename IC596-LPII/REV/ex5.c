@@ -8,7 +8,7 @@ int main(void)
     
     while(num != 0) 
     {
-        printf("Digite o numero %d: ",i++);
+        printf("Digite o numero %d: ",++i);
         scanf("%d", &num);
     }
 

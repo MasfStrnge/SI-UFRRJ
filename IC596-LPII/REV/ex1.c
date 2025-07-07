@@ -13,7 +13,7 @@ int main(void)
         printf("O número %d é PAR\n",num);
     }
     else {
-        printf("O número é IMPAR");
+        printf("O número é IMPAR\n");
     }
 
     return 0;
