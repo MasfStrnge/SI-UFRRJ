@@ -1,0 +1,1 @@
+// 25. Leia n notas com malloc e calcule a média.
