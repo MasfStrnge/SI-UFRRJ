@@ -25,12 +25,14 @@ int main(void)
 
     arquivo = fopen("arquivo2.bin","rb");
 
+    Produto lidos[3];
+
     if(arquivo == NULL) {
         perror("ERRO: FALHA NA ABERTURA DO ARQUIVO");
         return 1;
     }
 
-    fread(produtos,sizeof(Produto),3,arquivo);
+    fread(lidos,sizeof(Produto),3,arquivo);
 
     fclose(arquivo);
 
