@@ -36,5 +36,9 @@ int main(void)
 
     fclose(arquivo);
 
+    for(int i = 0; i < 3; i++) {
+        printf("%d - Nome: %s |Preço: R$%.2f\n",i+1,lidos[i].nome,lidos[i].preco);
+    }
+    
     return 0;
 }
