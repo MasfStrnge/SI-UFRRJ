@@ -22,7 +22,7 @@ int main(void)
     char buffer[200];
 
     while(fgets(buffer,sizeof(buffer),arquivo)) {
-        fputs(destino,arquivo);
+        fputs(buffer,destino);
     }
 
     fclose(arquivo);
