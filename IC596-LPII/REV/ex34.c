@@ -25,13 +25,17 @@ int main(void)
         return 1;
     }
 
-    char buffer[500];
+    int numero, soma = 0;
 
-    fgets(buffer,sizeof(buffer),arquivo);
-
-    printf("%s",buffer);
+    for(int i = 0; i < 10; i++) {
+        fscanf(arquivo,"%d",&numero);
+        soma += numero;
+    }
 
     fclose(arquivo);
+
+    float media = (float)soma/10;
+    printf("A média é: %.2f\n",media);
 
     return 0;
 }
