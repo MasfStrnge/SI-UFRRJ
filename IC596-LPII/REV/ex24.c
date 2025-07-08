@@ -17,6 +17,8 @@ int main(void)
         printf("%d ",vetor[i]);
     }
 
+    printf("\n");
+
     free(vetor);
 
     return 0;

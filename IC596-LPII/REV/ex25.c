@@ -26,7 +26,7 @@ int main(void)
 
     media = (float)soma / tamanho;
 
-    printf("A média das notas é de: %.2f", media);
+    printf("A média das notas é de: %.2f\n", media);
 
     free(notas);
 

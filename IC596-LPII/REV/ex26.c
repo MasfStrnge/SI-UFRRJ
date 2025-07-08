@@ -28,15 +28,15 @@ int main(void)
 
     vetor = temp;
 
-    free(temp);
-
-    for(int i = 0; i < novoTamanho; i++) {
+    for(int i = tamanho; i < novoTamanho; i++) {
         vetor[i] = 0;
     }
 
     for(int i = 0; i < novoTamanho; i++) {
         printf("%d ",vetor[i]);
     }
+
+    printf("\n");
 
     free(vetor);
 

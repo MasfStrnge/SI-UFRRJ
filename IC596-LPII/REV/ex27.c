@@ -3,6 +3,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int maiorValor(int *vetor, int tamanho) {
+    int maior = *vetor;
+    
+    for(int i = 1; i < tamanho; i++) {
+        if(vetor[i] > maior) {
+            maior = vetor[i];
+        }
+    }
+
+    return maior;
+}
+
 int main(void)
 {
     int tamanho = 5;
@@ -14,10 +26,14 @@ int main(void)
     }
 
     for(int i = 0; i < tamanho; i++) {
-        
+        printf("Digite o %dº valor: ",i+1);
+        scanf("%d",&vetor[i]);
     }
 
+    printf("O maior valor do array é: %d\n", maiorValor(vetor, tamanho));
 
-    
+    free(vetor);
+
+    return 0;
 
 }
