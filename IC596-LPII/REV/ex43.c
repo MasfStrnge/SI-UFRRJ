@@ -37,6 +37,8 @@ int main(void)
     fwrite(alunos,sizeof(Aluno),tamanho,arquivo);
 
     fclose(arquivo);
+    
+    free(alunos);
 
     return 0;
 }
